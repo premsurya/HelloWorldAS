@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - ./gradlew assembleDebug
+      - apt-get install -y tree
+      - tree -a
+artifacts:
+  files:
+    - app/build/outputs/apk/*
